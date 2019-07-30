@@ -15,24 +15,48 @@ $(document).ready(function () {
     showCursor: false
   });
 
-})
-
-
-
-//Carouses
-$('.owl-carousel').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 3
-    },
-    1000: {
-      items: 5
+  //Carouses
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    items: 4,
+    responsive: {
+      0: {
+        items: 1
+      },
+      480: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      938: {
+        items: 4
+      }
     }
-  }
+  });
+
+
+  // Easy PieChart
+
+
+  var skillTopOffset = $('.skill-section').offset().top;
+
+
+  $(window).scroll(function () {
+    if (window.pageYOffset > skillTopOffset - $(window).height() + 200) {
+      $('.chart').easyPieChart({
+        easing: 'easyInOut',
+        barColor: '#fff',
+        trackColor: false,
+        scaleColor: false,
+        lineWidth: 4,
+        size: 152,
+        onStep: function (from, to, percent) {
+          $(this.el).find('.percent').text(Math.round(percent))
+        }
+      })
+    }
+  });
 })
+
+

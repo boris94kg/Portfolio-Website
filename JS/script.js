@@ -35,13 +35,12 @@ $(document).ready(function () {
     }
   });
 
-
   // Easy PieChart
-
-
   var skillTopOffset = $('.skill-section').offset().top;
+  var statsTopOffSet = $('.stats-section').offset().top;
+  var countFinish = false;
 
-
+// Functionality for circles
   $(window).scroll(function () {
     if (window.pageYOffset > skillTopOffset - $(window).height() + 200) {
       $('.chart').easyPieChart({
@@ -56,7 +55,30 @@ $(document).ready(function () {
         }
       })
     }
+
+    if (!countFinish && window.pageYOffset > statsTopOffSet - $(window).height() + 200){
+      $('.counter').each(function(){
+        var element = $(this);
+        var endVal = Number.parseInt(element.text());
+    
+        element.countup(endVal);
+
+      })
+      countFinish = true;
+    }
   });
+
+
+    // Counters for projects and websites
+
+  // $('.counter').each(function(){
+  //   var element = $(this);
+  //   var endVal = Number.parseInt(element.text());
+
+  //   element.countup(endVal);
+  // })
+
+
 })
 
 

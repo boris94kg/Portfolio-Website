@@ -1,3 +1,7 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 .overlay{
   position: absolute;
   width: 100%;
@@ -54,3 +58,10 @@
     font-size: 23px;
   }
 
+.section{
+  padding: 100px 0;
+}
+
+.myImage{
+  max-width: 100%;
+}

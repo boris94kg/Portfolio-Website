@@ -79,7 +79,8 @@ body {
   max-width: 100%;
 }
 
-.skill-section {
+.skill-section,
+.contact-section {
   background-color: var(--main-site-color);
   color: #fff;
 }
@@ -172,4 +173,150 @@ body {
   font-size: 45px;
   margin-left: -20%;
   color: #000;
+}
+
+.contact-button{
+  display: inline-block;
+  color: #fff;
+  padding: 15px 20px;
+  border: 1px solid #fff;
+  margin-top: 20px;   
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+
+
+.contact-button:hover{
+  text-decoration: none;
+  background-color: #fff;
+  color: var(--main-site-color);
+}
+
+
+.filter{
+  text-align: center;
+  width: 100%;
+}
+
+.section .heading{
+  text-align: center;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+
+.filter a{
+  display: block;
+  color: #444;
+  border: 1px solid #444;
+  padding: 10px 18px;
+}
+
+.filter li{
+  display: inline-block;
+  padding: 5px;
+}
+
+.filter .current{
+  background-color: var(--main-site-color);
+  color: #fff;
+  border-color: #444;
+}
+
+.items-container{
+  width: 100%;
+
+}
+
+.items li{
+  display: inline-block;
+  padding: 5px;
+}
+
+.items li img{
+  width: 100%;
+}
+
+.items .item{
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+
+.items .icons{
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  margin: -20px auto 0px -47px;
+  text-align: center;
+  z-index: 3;
+
+}
+
+
+.items .icons i{
+  color: #fff;
+  margin-top:  11px;
+  font-size: 20px;
+}
+
+
+.items a{
+  width: 40px;
+  height: 48px;
+  background-color: var(--main-site-color);
+  position: relative;
+  display: inline-block;
+
+  -webkit-transition: all 0.2s linear, 0.3s;
+  -moz-transition: all 0.2s linear, 0.3s;
+  -o-transition: all 0.2s linear, 0.3s;
+  -ms-transition: all 0.2s linear, 0.3s;
+  transition: all 0.2s linear, 0.3s;
+}
+
+
+.image-overlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  -webkit-transition: all 0.2s linear, 1s;
+  -moz-transition: all 0.2s linear, 1s;
+  -o-transition: all 0.2s linear, 1s;
+  -ms-transition: all 0.2s linear, 1s;
+  transition: all 0.2s linear, 1s;
+
+}
+
+
+.items .item:hover .image-overlay{
+  opacity: 1;
+}
+
+
+.items .open-button{
+  float: left;
+  left: -200px;
+}
+
+.items .project-link{
+  float: right;
+  right: -200px;
+} 
+
+
+.items .item:hover .open-button{
+  left: 0;
+}
+
+.items .item:hover .project-link{
+  right: 0;
 }

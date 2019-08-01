@@ -340,3 +340,60 @@ body {
 .items {
   padding: 0;
 }
+
+
+.year{
+  color:var(--main-site-color);
+  font-size: 14px;
+}
+
+
+.copyright-section {
+  background-color: #2d3436;
+  color: #fff;
+  padding: 35px 5px;
+}
+
+.copyright-section p{
+  margin: 0px;
+}
+
+#navigation{
+  background-color: var(--main-site-color);
+  padding: 20px 10px;
+  z-index: 100;
+  width: 100%;
+}
+
+#navigation li {
+  padding: 0px 10px;
+}
+
+#navigation li a{
+  color: #fff;
+}
+
+.navbar-brand,
+.navbar-brand:hover{
+  color: #fff;
+}
+
+.navbar-toggler-icon{ 
+  background: url('../IMG/icons/menu.png');
+  background-size: 100%;
+}
+
+
+
+.fixedNav #navigation{
+  position: fixed;
+  top: 0;
+}
+
+
+
+
+
+
+
+

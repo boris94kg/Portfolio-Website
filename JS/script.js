@@ -1,3 +1,21 @@
+// Preloader
+
+$(window).on('load', function(){
+  $('.preloader .inner-preloader').fadeOut(600, function(){
+    $('.preloader ').fadeOut(750);
+  })
+
+  $('.items').isotope({
+    filter: '*',
+    animationOptions:{
+      duration: 1500,
+      easing: 'linear',
+      queue: false
+    }
+  })
+})
+
+
 //Background image change
 $(document).ready(function () {
   $('#slides').superslides({
@@ -68,19 +86,10 @@ $(document).ready(function () {
     }
   });
 
-
 $('[data-fancybox]').fancybox();
 
 
-$('.items').isotope({
-  filter: '*',
-  animationOptions:{
-    duration: 1500,
-    easing: 'linear',
-    queue: false
-  }
-})
-
+// Changing active class in portfolio section
 $('#filters a').click(function(){
     $('#filters .current').removeClass('current');
     $(this).addClass('current');
@@ -100,6 +109,7 @@ $('#filters a').click(function(){
 
 });
 
+// Smooth Scrolling
 $('#navigation li a').click(function(e){
   e.preventDefault();
 
@@ -110,10 +120,7 @@ $('#navigation li a').click(function(e){
   }, "slow")
 });
 
-
-
-
-
+// Sticky navigation
 const nav = $('#navigation');
 const navTop = nav.offset().top;
 
@@ -129,11 +136,7 @@ function stickyNavigation(){
     body.removeClass('fixedNav');
     body.css("padding-top", 0);
   }
-
-
-
 }
-
 })
  
 

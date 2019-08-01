@@ -101,9 +101,9 @@ body {
 
 .chart canvas{
   position: absolute;
-  left: 0;
+  left: 0; 
   top: 0;
-}
+} 
 
 .chart .percent {
   color: #000;

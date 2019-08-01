@@ -33,24 +33,36 @@ $(document).ready(function () {
     showCursor: false
   });
 
-  //Carouses
+  // Carousel
   $('.owl-carousel').owlCarousel({
-    loop: true,
+    loop: true,    
     items: 4,
+    autoplay: true,
+    autoplayTimeout:6500,
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        // nav:true
       },
       480: {
-        items: 2
+        items: 2,
+        // nav:true
       },
       768: {
-        items: 3
+        items: 3,
+        // nav:true
       },
       938: {
-        items: 4
+        items: 4,
+        // nav:true
       }
     }
+  });
+
+
+  $("owl-theme").owlCarousel({
+    navigation: true,
+    navigationText: ["<","<img src='mynextimage.png'>"]
   });
 
   // Easy PieChart
@@ -58,7 +70,7 @@ $(document).ready(function () {
   var statsTopOffSet = $('.stats-section').offset().top;
   var countFinish = false;
 
-// Functionality for circles
+// Functionality for circles 'Pie Chart'
   $(window).scroll(function () {
     if (window.pageYOffset > skillTopOffset - $(window).height() + 200) {
       $('.chart').easyPieChart({

@@ -352,10 +352,44 @@ body {
   background-color: #2d3436;
   color: #fff;
   padding: 35px 5px;
+  text-align: center;
 }
 
 .copyright-section p{
   margin: 0px;
+}
+
+.social{
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+.social ul{
+  display: inline-block;
+  padding: 0px;
+  margin: 10px 0px;
+}
+
+.social ul a{
+  color: #fff;
+  font-size: 22px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.social ul a:hover{
+  color: #5bc0de;
+  -webkit-transition: color, 0.3s;
+  -moz-transition: color, 0.3s;
+  -o-transition: color, 0.3s;
+  -ms-transition: color, 0.3s;
+  transition: color, 0.3s;
+}
+
+.social ul li { 
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px auto;
 }
 
 #navigation{
@@ -406,4 +440,26 @@ body {
   height: 100%;
   background: url('../IMG/icons/preloader.gif') center center no-repeat;
 }
+
+@media only screen and (max-width: 600px){
+
+  .slides-navigation{
+    display: none;
+  }
+
+  .social ul a {
+    color: #fff;
+    font-size: 30px;
+    margin: 5px;
+    text-decoration: none;
+}
+}
+  
+  @media only screen and (max-width: 321px){
+    
+    .title-msg .heading p.main{
+      font-size: 43px;
+    }
+}
+
 

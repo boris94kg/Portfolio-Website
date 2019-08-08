@@ -71,6 +71,22 @@ body {
   font-size: 23px;
 }
 
+.swing-holder{
+  display: inline-block;
+  margin-top: 100px;
+  color: #fff;
+}
+
+
+.swing {
+  color: #fff;
+  animation-name: swing;
+  animation-duration: 1.4s;
+  animation-delay: 1.4s;
+  transform-origin: top center;
+}
+
+
 .section {
   padding: 100px 0;
 }
@@ -162,6 +178,8 @@ body {
   font-weight: 700;
   margin: 0;
 }
+
+
 
 
 .square-icon{
@@ -417,13 +435,10 @@ body {
   background-size: 100%;
 }
 
-
-
 .fixedNav #navigation{
   position: fixed;
   top: 0;
 }
-
 
 .preloader{
   width: 100%;
@@ -440,6 +455,26 @@ body {
   height: 100%;
   background: url('../IMG/icons/preloader.gif') center center no-repeat;
 }
+
+@keyframes swing{
+    20% {
+      transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    40% {
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60% {
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+    100% {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
 
 @media only screen and (max-width: 600px){
 

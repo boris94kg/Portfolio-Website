@@ -132,6 +132,19 @@ $('#navigation li a').click(function(e){
   }, "slow")
 });
 
+// Smooth Scrolling 2
+$('.swing-holder').click(function(e){
+  e.preventDefault();
+
+  var element = $(this).attr('href');
+  var position = $(element).offset().top;
+  $('html, body').animate({
+    scrollTop: position - 50
+  }, "slow")
+});
+
+
+
 // Sticky navigation
 const nav = $('#navigation');
 const navTop = nav.offset().top;

@@ -1,3 +1,3 @@
 # Portfolio-Website
 
-Simple portfolio website about me and my projects.
+Portfolio website where you can see little representation of my projects and something about me.
